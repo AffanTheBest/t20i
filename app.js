@@ -93,12 +93,13 @@ function seven(){
         document.getElementById('video').style.display = "none";
         document.getElementById('video2').style.display = "none";
         document.getElementById('video1').style.display = "block";
+        document.getElementById('dropdown').innerText = "Quality (720P)";
         video.pause();
         video2.pause();
         video1.currentTime = video1.duration - 4;
         video1.play();
         console.log('Switched to 720p');
-        document.getElementById('dropdown').innerText = "Quality (720P)";
+        
     }
 }
 
@@ -109,11 +110,11 @@ function four(){
         document.getElementById('video').style.display = "none";
         document.getElementById('video1').style.display = "none";
         document.getElementById('video2').style.display = "block";
+        document.getElementById('dropdown').innerText = "Quality (480P)";
         video.pause();
         video1.pause();
         video2.currentTime = video2.duration - 4;
         video2.play();
         console.log('Switched to 480p');
-        document.getElementById('dropdown').innerText = "Quality (480P)";
     }
 }
