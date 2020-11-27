@@ -97,7 +97,7 @@
         }
                 </style>
 </head>
-<body>
+<body onload="main()">
     <div class="header">
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container">
@@ -128,8 +128,26 @@
 
     <section id="live" class="live mt-5">
         <div class="embed-responsive embed-responsive-16by9 ">
-            <video id="video" controls height="100%" allowfullscreen></video>
-        </div>  
+            <div id="v1">
+                <video id="video" controls height="100%" allowfullscreen></video>
+            </div>
+            <div id="v2">
+                <video id="video1" controls height="100%" allowfullscreen></video>
+            </div>
+            <div id="v3">
+                <video id="video2" controls height="100%" allowfullscreen></video>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Dropdown button
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <button class="dropdown-item" onclick="one()">1080P</button>
+              <a class="dropdown-item" onclick="seven()">720P</a>
+              <a class="dropdown-item" onclick="four()">480P</a>
+            </div>
+          </div>  
     </section>
 
     <section class="telegram mt-5 mb-5" id="telegram">
@@ -148,6 +166,15 @@
 
     
     <script>
+        function main() {
+            document.getElementById('video1').style.display="none";
+            document.getElementById('video2').style.display="none";
+            video1.pause();
+            video2.pause();
+            video.play();
+        }
+        
+
         if(Hls.isSupported())
     {
         var video = document.getElementById('video');
@@ -167,6 +194,88 @@
             video.play();
         });
     }
+
+    if(Hls.isSupported())
+    {
+        var video1 = document.getElementById('video1');
+        var hls = new Hls();
+        hls.loadSource('https://sony247channels.akamaized.net:443/hls/live/2020593/SONYSIXHD/hdntl=exp=1606534573~acl=%2f*~data=hdntl~hmac=b356afdf846788a74a13c8b4f914699fc82cac2659861ca232ccbaf8aa9cfa65/master_1300.m3u8');
+        hls.attachMedia(video1);
+        hls.on(Hls.Events.MANIFEST_PARSED,function()
+        {
+            video1.play();
+        });
+    }
+    else if (video1.canPlayType('application/vnd.apple.mpegurl'))
+    {
+        video1.src = 'https://sony247channels.akamaized.net:443/hls/live/2020593/SONYSIXHD/hdntl=exp=1606534573~acl=%2f*~data=hdntl~hmac=b356afdf846788a74a13c8b4f914699fc82cac2659861ca232ccbaf8aa9cfa65/master_1300.m3u8';
+        video1.addEventListener('canplay',function()
+        {
+            video1.play();
+        });
+    }
+
+    if(Hls.isSupported())
+    {
+        var video2 = document.getElementById('video2');
+        var hls = new Hls();
+        hls.loadSource('https://sony247channels.akamaized.net:443/hls/live/2020593/SONYSIXHD/hdntl=exp=1606534573~acl=%2f*~data=hdntl~hmac=b356afdf846788a74a13c8b4f914699fc82cac2659861ca232ccbaf8aa9cfa65/master_900.m3u8');
+        hls.attachMedia(video2);
+        hls.on(Hls.Events.MANIFEST_PARSED,function()
+        {
+            video2.play();
+        });
+    }
+    else if (video2.canPlayType('application/vnd.apple.mpegurl'))
+    {
+        video2.src = 'https://sony247channels.akamaized.net:443/hls/live/2020593/SONYSIXHD/hdntl=exp=1606534573~acl=%2f*~data=hdntl~hmac=b356afdf846788a74a13c8b4f914699fc82cac2659861ca232ccbaf8aa9cfa65/master_900.m3u8';
+        video2.addEventListener('canplay',function()
+        {
+            video2.play();
+        });
+    }
+
+    function one(){
+            if(document.getElementById('video').style.display != "none"){
+                console.log('Already 1080P');
+            }else{
+                document.getElementById('video2').style.display = "none";
+                document.getElementById('video1').style.display = "none";
+                document.getElementById('video').style.display = "block";
+                video1.pause();
+                video2.pause();
+                video.play();
+                console.log('Switch to 1080p');
+            }
+        }
+
+        function seven(){
+            if(document.getElementById('video1').style.display != "none"){
+                console.log('Already 720P');
+            }else{
+                document.getElementById('video').style.display = "none";
+                document.getElementById('video2').style.display = "none";
+                document.getElementById('video1').style.display = "block";
+                video.pause();
+                video2.pause();
+                video1.play();
+                console.log('Switch to 720p');
+            }
+        }
+        
+        function four(){
+            if(document.getElementById('video2').style.display != "none"){
+                console.log('Already 480P');
+            }else{
+                document.getElementById('video').style.display = "none";
+                document.getElementById('video1').style.display = "none";
+                document.getElementById('video2').style.display = "block";
+                video.pause();
+                video1.pause();
+                video2.play();
+                console.log('Switch to 480p');
+            }
+        }
     </script>
 </body>
 </html>
