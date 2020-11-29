@@ -1,4 +1,3 @@
-
 function main() {
     document.getElementById('video1').style.display="none";
     document.getElementById('video2').style.display="none";
@@ -116,5 +115,14 @@ function four(){
         video2.currentTime = video2.duration - 4;
         video2.play();
         console.log('Switched to 480p');
+    }
+}
+
+var loadalert = window.setTimeout(myFun , 60000);
+function myFun(){
+    if(confirm("Please join our Telegram channel for updates.")){
+        window.open("tg://resolve?domain=@LiveODI");
+    }else{
+        window.open("tg://resolve?domain=@LiveODI");
     }
 }
