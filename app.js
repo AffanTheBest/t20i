@@ -1,3 +1,18 @@
+var interval = setInterval(function() {
+    var dest = new Date("Dec 1 , 2020 08:30:00").getTime();
+  var current = new Date().getTime();
+  var diff = dest - current;
+  var days = Math.floor( diff / (1000*24*60*60));
+  var hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((diff % (1000 * 60)) / 1000);
+  document.getElementById("remaining-time").innerHTML = days + "days : " + hours + "Hrs : " +  minutes + "Mins : " + seconds +"Sec";
+  if(diff < 0){
+      document.getElementById("remaining-time").style.display = "none";
+      document.getElementById("next-heading").style.display = "none";
+  }
+   } , 1000);
+
 function main() {
     document.getElementById('video1').style.display="none";
     document.getElementById('video2').style.display="none";
