@@ -28,7 +28,7 @@ if(Hls.isSupported())
 {
 var video = document.getElementById('video');
 var hls = new Hls();
-hls.loadSource('https://sony247channels.akamaized.net/hls/live/2004804/SONYTEN3HD/hdntl=exp=1606704266~acl=%2f*~data=hdntl~hmac=e11f4c8319c92aa5c791a22126d72802092b1cc7678413105606c9c55dbe835d/master_2128.m3u8');
+hls.loadSource('https://sonydai.akamaized.net/hls/live/2022316/DAI12ME/master.m3u8?hdnea=exp=1606966095~acl=/*~hmac=fd2d2e63623b39989c07da36de4e73cf62633bc4623793e1aec41a56d222239c');
 hls.attachMedia(video);
 hls.on(Hls.Events.MANIFEST_PARSED,function()
 {
@@ -37,7 +37,7 @@ hls.on(Hls.Events.MANIFEST_PARSED,function()
 }
 else if (video.canPlayType('application/vnd.apple.mpegurl'))
 {
-video.src = 'https://sony247channels.akamaized.net/hls/live/2004804/SONYTEN3HD/hdntl=exp=1606704266~acl=%2f*~data=hdntl~hmac=e11f4c8319c92aa5c791a22126d72802092b1cc7678413105606c9c55dbe835d/master_2128.m3u8';
+video.src = 'https://sonydai.akamaized.net/hls/live/2022316/DAI12ME/master.m3u8?hdnea=exp=1606966095~acl=/*~hmac=fd2d2e63623b39989c07da36de4e73cf62633bc4623793e1aec41a56d222239c';
 video.addEventListener('canplay',function()
 {
     video.play();
@@ -48,7 +48,7 @@ if(Hls.isSupported())
 {
 var video1 = document.getElementById('video1');
 var hls = new Hls();
-hls.loadSource('https://sony247channels.akamaized.net/hls/live/2020593/SONYSIXHD/hdntl=exp=1606704266~acl=%2f*~data=hdntl~hmac=e11f4c8319c92aa5c791a22126d72802092b1cc7678413105606c9c55dbe835d/master_412.m3u8');
+hls.loadSource('https://sonydai.akamaized.net/hls/live/2022316/DAI12ME/master.m3u8?hdnea=exp=1606966095~acl=/*~hmac=fd2d2e63623b39989c07da36de4e73cf62633bc4623793e1aec41a56d222239c');
 hls.attachMedia(video1);
 hls.on(Hls.Events.MANIFEST_PARSED,function()
 {
@@ -57,7 +57,7 @@ hls.on(Hls.Events.MANIFEST_PARSED,function()
 }
 else if (video1.canPlayType('application/vnd.apple.mpegurl'))
 {
-video1.src = 'https://sony247channels.akamaized.net/hls/live/2020593/SONYSIXHD/hdntl=exp=1606704266~acl=%2f*~data=hdntl~hmac=e11f4c8319c92aa5c791a22126d72802092b1cc7678413105606c9c55dbe835d/master_412.m3u8';
+video1.src = 'https://sonydai.akamaized.net/hls/live/2022316/DAI12ME/master.m3u8?hdnea=exp=1606966095~acl=/*~hmac=fd2d2e63623b39989c07da36de4e73cf62633bc4623793e1aec41a56d222239c';
 video1.addEventListener('canplay',function()
 {
     video1.play();
@@ -68,7 +68,7 @@ if(Hls.isSupported())
 {
 var video2 = document.getElementById('video2');
 var hls = new Hls();
-hls.loadSource('https://sony247channels.akamaized.net/hls/live/2020593/SONYSIXHD/hdntl=exp=1606704266~acl=%2f*~data=hdntl~hmac=e11f4c8319c92aa5c791a22126d72802092b1cc7678413105606c9c55dbe835d/master_412.m3u8');
+hls.loadSource('https://sonydai.akamaized.net/hls/live/2022316/DAI12ME/master.m3u8?hdnea=exp=1606966095~acl=/*~hmac=fd2d2e63623b39989c07da36de4e73cf62633bc4623793e1aec41a56d222239c');
 hls.attachMedia(video2);
 hls.on(Hls.Events.MANIFEST_PARSED,function()
 {
@@ -77,7 +77,7 @@ hls.on(Hls.Events.MANIFEST_PARSED,function()
 }
 else if (video2.canPlayType('application/vnd.apple.mpegurl'))
 {
-video2.src = 'https://sony247channels.akamaized.net/hls/live/2020593/SONYSIXHD/hdntl=exp=1606704266~acl=%2f*~data=hdntl~hmac=e11f4c8319c92aa5c791a22126d72802092b1cc7678413105606c9c55dbe835d/master_412.m3u8';
+video2.src = 'https://sonydai.akamaized.net/hls/live/2022316/DAI12ME/master.m3u8?hdnea=exp=1606966095~acl=/*~hmac=fd2d2e63623b39989c07da36de4e73cf62633bc4623793e1aec41a56d222239c';
 video2.addEventListener('canplay',function()
 {
     video2.play();
