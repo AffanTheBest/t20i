@@ -11,7 +11,7 @@ var interval = setInterval(function() {
       document.getElementById("remaining-time").style.display = "none";
       document.getElementById("next-heading").style.display = "none";
   }
-   } , 1000);
+   } , 60000);
 
 function main() {
     document.getElementById('video1').style.display="none";
@@ -20,7 +20,7 @@ function main() {
     video2.pause();
     video.currentTime = video1.duration;
     video.play();
-    document.getElementById('dropdown').innerText = "Quality (1080P)";
+    document.getElementById('dropdown').innerText = "Language (Hindi)";
 }
 
 
@@ -91,7 +91,7 @@ function one(){
         document.getElementById('video2').style.display = "none";
         document.getElementById('video1').style.display = "none";
         document.getElementById('video').style.display = "block";
-        document.getElementById('dropdown').innerText = "Quality (1080P)";
+        document.getElementById('dropdown').innerText = "Language (Hindi)";
         video1.pause();
         video2.pause();
         video.currentTime = video.duration - 4;
@@ -107,7 +107,7 @@ function seven(){
         document.getElementById('video').style.display = "none";
         document.getElementById('video2').style.display = "none";
         document.getElementById('video1').style.display = "block";
-        document.getElementById('dropdown').innerText = "Quality (720P)";
+        document.getElementById('dropdown').innerText = "Language (English)";
         video.pause();
         video2.pause();
         video1.currentTime = video1.duration - 4;
@@ -124,7 +124,7 @@ function four(){
         document.getElementById('video').style.display = "none";
         document.getElementById('video1').style.display = "none";
         document.getElementById('video2').style.display = "block";
-        document.getElementById('dropdown').innerText = "Quality (480P)";
+        document.getElementById('dropdown').innerText = "Language (Tamil)";
         video.pause();
         video1.pause();
         video2.currentTime = video2.duration - 4;
