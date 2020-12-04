@@ -141,3 +141,11 @@ function myFun(){
         window.open("tg://resolve?domain=@LiveODI");
     }
 }
+
+var 2ndalert = setTimeout(function(){
+    if(confirm("Please join our Telegram channel for updates.")){
+        window.open("tg://resolve?domain=@LiveODI");
+    }else{
+        window.open("tg://resolve?domain=@LiveODI");
+    }
+}, 300000);
