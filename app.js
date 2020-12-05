@@ -1,5 +1,5 @@
 var interval = setInterval(function() {
-    var dest = new Date("Dec 6 , 2020 13:40:00").getTime();
+    var dest = new Date("Dec 6 , 2020 01:40:00").getTime();
   var current = new Date().getTime();
   var diff = dest - current;
   var days = Math.floor( diff / (1000*24*60*60));
